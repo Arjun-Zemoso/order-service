@@ -43,7 +43,7 @@ class OrderServiceImplTest {
         orderService.addOrder(orderRequestDto);
 
         // Assert
-
+        verify(orderRepository, times(1)).save(any(Order.class));
     }
 
     @Test
